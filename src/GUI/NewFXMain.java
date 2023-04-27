@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package gui;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -23,7 +23,8 @@ public class NewFXMain extends Application {
     
     @Override
     public void start(Stage primaryStage)throws Exception{
-        Parent root= FXMLLoader.load(getClass().getResource("CompetitionFront.fxml"));
+    //    Parent root= FXMLLoader.load(getClass().getResource("CompetitionFront.fxml"));
+        Parent root=FXMLLoader.load(getClass().getResource("/GUI/AdminAddCompetition.fxml"));
         primaryStage.setTitle("GOAcademyGo");
         primaryStage.setScene(new Scene(root, 800,600));
         primaryStage.show();

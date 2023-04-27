@@ -33,7 +33,8 @@ public class Pidev extends Application {
     @Override
     public void start(Stage primaryStage)  throws IOException {
      //Parent p = FXMLLoader.load(getClass().getResource("/GUI/AdminAddCompetition.fxml"));
-      Parent root= FXMLLoader.load(getClass().getResource("/GUI/AdminListCompetition.fxml"));
+     // Parent root= FXMLLoader.load(getClass().getResource("/GUI/AdminListCompetition.fxml"));
+        Parent root=FXMLLoader.load(getClass().getResource("/GUI/MotDePasseOublie1.fxml"));
         primaryStage.setTitle("Hello");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
