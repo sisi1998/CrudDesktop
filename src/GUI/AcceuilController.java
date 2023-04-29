@@ -40,6 +40,8 @@ private User userc;
     private AnchorPane sidePane;
     @FXML
     private Button backlog;
+    @FXML
+    private ImageView competition;
 
     /**
      * Initializes the controller class.
