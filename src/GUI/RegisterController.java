@@ -90,10 +90,10 @@ public class RegisterController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Image image1 = new Image(getClass().getResourceAsStream("/image/asset/broad-img.jpg"));
-        imgg.setImage(image1);
-        imgg.setPreserveRatio(true);
-        
+//        Image image1 = new Image(getClass().getResourceAsStream("/image/asset/broad-img.jpg"));
+//        imgg.setImage(image1);
+//        imgg.setPreserveRatio(true);
+//        
         //Choicebox roles init values
         ObservableList<String> list = FXCollections.observableArrayList("joueur", "coach");
         roles.setItems(list);
