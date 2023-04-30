@@ -90,10 +90,10 @@ public class RegisterController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Image image1 = new Image(getClass().getResourceAsStream("/image/asset/broad-img.jpg"));
-        imgg.setImage(image1);
-        imgg.setPreserveRatio(true);
-        
+//        Image image1 = new Image(getClass().getResourceAsStream("/image/asset/broad-img.jpg"));
+//        imgg.setImage(image1);
+//        imgg.setPreserveRatio(true);
+//        
         //Choicebox roles init values
         ObservableList<String> list = FXCollections.observableArrayList("joueur", "coach");
         roles.setItems(list);
@@ -175,7 +175,7 @@ public class RegisterController implements Initializable {
             Path sourcePath = selectedFile.toPath();
             
             System.out.println(sourcePath.toString());
-            Path targetPath = Paths.get("src/image/" + selectedFile.getName());
+            Path targetPath = Paths.get("./src/image/" + selectedFile.getName());
             Files.copy(sourcePath, targetPath);
     }
         PasswordCrypt pc = new PasswordCrypt();

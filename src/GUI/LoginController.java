@@ -61,8 +61,8 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        Image image1 = new Image(getClass().getResourceAsStream("/image/asset/page-header-bg.jpg"));
-        cr7view.setImage(image1);
+//        Image image1 = new Image(getClass().getResourceAsStream("/image/asset/page-header-bg.jpg"));
+//        cr7view.setImage(image1);
         
         
         // TODO
@@ -82,7 +82,7 @@ public class LoginController implements Initializable {
        error.setTextFill(Color.GREEN);
        //_____ passation session vers Acceuil
        if(!gg.isIs_blocked()){
-           System.out.println("__xx___");
+           System.out.println("___xx___");
        FXMLLoader loader= new FXMLLoader(getClass().getResource("Acceuil.fxml"));
         Parent root=loader.load();
         

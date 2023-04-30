@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -11,62 +13,71 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProfileUserController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProfileUserController">
   <children>
-      <GridPane layoutX="53.0" layoutY="181.0" prefHeight="183.0" prefWidth="495.0">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="345.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints maxHeight="153.00000915527343" minHeight="10.0" prefHeight="40.60001220703126" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="59.79998779296875" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="33.599999999999994" minHeight="24.800018310546875" prefHeight="33.599999999999994" />
-         </rowConstraints>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
+      <AnchorPane layoutX="235.0" layoutY="7.0" prefHeight="590.0" prefWidth="610.0" style="-fx-background-radius: 50;" styleClass="button3" stylesheets="@fullpackstyling.css">
          <children>
-            <Label text="Prénom :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-            <Label text="Email :" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-            <Label fx:id="nomLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <GridPane layoutX="66.0" layoutY="112.0" prefHeight="251.0" prefWidth="504.0" style="-fx-background-color: white; -fx-background-radius: 40;" stylesheets="@fullpackstyling.css">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="345.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="153.00000915527343" minHeight="10.0" prefHeight="40.60001220703126" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="59.79998779296875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="33.599999999999994" minHeight="24.800018310546875" prefHeight="33.599999999999994" />
+                  <RowConstraints maxHeight="33.599999999999994" minHeight="24.800018310546875" prefHeight="33.599999999999994" />
+               </rowConstraints>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Label text="Prénom :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                  <Label text="Email :" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                  <Label fx:id="nomLabel" text="" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="prenomLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Role :" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                  <Label fx:id="roleLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nom :" GridPane.halignment="RIGHT" />
+                  <ImageView fx:id="usrImg" fitHeight="213.0" fitWidth="239.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 40;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="date de naissance :" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            <Button fx:id="back" layoutX="25.0" layoutY="550.0" mnemonicParsing="false" onAction="#retourAcceuil" styleClass="chosen-fruit-card" stylesheets="@../styleSheets/balha.css" text="Back" />
+            <Text fill="WHITE" layoutX="103.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="30.0" />
                </font>
-            </Label>
-            <Label fx:id="prenomLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="emailLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label text="Role :" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
-            <Label fx:id="roleLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label text="Nom :" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
-         </children>
-      </GridPane>
-      <ImageView fx:id="usrImg" fitHeight="183.0" fitWidth="200.0" layoutX="586.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" />
-      <AnchorPane prefHeight="75.0" prefWidth="804.0" style="-fx-background-color: #007aff;">
-         <children>
-            <Label layoutX="14.0" layoutY="15.0" styleClass="titreApp" stylesheets="@../styleSheets/balha.css" text="GOACADEMY" textFill="WHITE" />
+            </Text>
          </children>
       </AnchorPane>
-      <Label layoutX="102.0" layoutY="364.0" text="date de naissance :" />
       <Label fx:id="birth" layoutX="222.0" layoutY="364.0" />
-      <Text layoutX="360.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
-         <font>
-            <Font name="System Bold" size="30.0" />
-         </font>
-      </Text>
-      <Button fx:id="back" layoutX="385.0" layoutY="467.0" mnemonicParsing="false" onAction="#retourAcceuil" styleClass="btn" stylesheets="@../styleSheets/balha.css" text="Back" />
+      <ImageView fitHeight="120.0" fitWidth="122.0" layoutX="115.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IMG/342556323_704667194998998_8201126061904933936_n.png" />
+         </image>
+      </ImageView>
    </children>
+   <stylesheets>
+      <URL value="@adminaddcompetition.css" />
+      <URL value="@fullpackstyling.css" />
+   </stylesheets>
 </AnchorPane>
