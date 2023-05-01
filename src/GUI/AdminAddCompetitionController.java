@@ -109,9 +109,9 @@ public class AdminAddCompetitionController implements Initializable {
     Arena a2 = new Arena(2,"Haruka");
     /////static equipe instancitaion to be implented after integration
     
-      Equipe eq1 = new Equipe(1,"Stars");
-     Equipe eq2 = new Equipe(3,"Fanatic");
-     Equipe eq3 = new Equipe(2,"Manta");
+//      Equipe eq1 = new Equipe(1,"Stars");
+//     Equipe eq2 = new Equipe(3,"Fanatic");
+//     Equipe eq3 = new Equipe(2,"Manta");
     @FXML
     private ImageView imgview;
     @FXML

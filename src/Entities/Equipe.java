@@ -14,9 +14,11 @@ import java.util.List;
  */
 public class Equipe {
     private int id;
-    private String Nom;
+    private String nom,logo;
+    String origine;
+     int nb_joueurs;
      private List<Competition> competitions = new ArrayList<Competition>();
-
+     private List<PerformanceEquipe> PerformanceEquipe = new ArrayList<PerformanceEquipe>();
     public int getId() {
         return id;
     }
@@ -26,11 +28,11 @@ public class Equipe {
     }
 
     public String getNom() {
-        return Nom;
+        return nom;
     }
 
     public void setNom(String Nom) {
-        this.Nom = Nom;
+        this.nom = Nom;
     }
 
     public List<Competition> getCompetitions() {
@@ -43,24 +45,68 @@ public class Equipe {
 
     public Equipe(int id, String Nom) {
         this.id = id;
-        this.Nom = Nom;
+        this.nom = Nom;
     }
 
     public Equipe(String Nom) {
-        this.Nom = Nom;
+        this.nom = Nom;
     }
 
     public Equipe(int id) {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return Nom;
-    }
+ 
      
      public Equipe() {
         
     }
+     
+     
+    public Equipe(String nom, String logo, int nb_joueurs, String origine) {
+        this.nom = nom;
+        this.logo = logo;
+        this.nb_joueurs = nb_joueurs;
+        this.origine = origine;
+    }
+//2
+    public Equipe(int id, String nom, String logo, int nb_joueurs, String origine) {
+        this.id = id;
+        this.nom = nom;
+        this.logo = logo;
+        this.nb_joueurs = nb_joueurs;
+        this.origine = origine;
+    }
+
+
+     
+      @Override
+    public String toString() {
+        return "Equipe{" + "id=" + id + ", nom=" + nom + ", logo=" + logo + ", nb_joueurs=" + nb_joueurs + ", origine=" + origine + '}';
+    }
+      public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public int getNb_joueurs() {
+        return nb_joueurs;
+    }
+
+    public void setNb_joueurs(int nb_joueurs) {
+        this.nb_joueurs = nb_joueurs;
+    }
+
+    public String getOrigine() {
+        return origine;
+    }
+
+    public void setOrigine(String origine) {
+        this.origine = origine;
+    }
     
 }
+
