@@ -1,25 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EquipeIndexController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EquipeIndexController">
      <children>
-      <ListView fx:id="ListeItemsEquipe" layoutX="65.0" layoutY="97.0" prefHeight="205.0" prefWidth="378.0" />
-      <Text layoutX="166.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipe Index" wrappingWidth="176.5367431640625">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Text>
-      <Label layoutX="530.0" layoutY="88.0" text="Operations" />
-      <ChoiceBox fx:id="operations" layoutX="488.0" layoutY="106.0" prefWidth="150.0" />
-      <Button fx:id="rfch" layoutX="532.0" layoutY="251.0" mnemonicParsing="false" onAction="#AddEquipe" text="Ajouter" />
-      <TextField fx:id="search" layoutX="376.0" layoutY="42.0" />
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-radius: 70;" styleClass="linear-grad">
+         <children>
+            <AnchorPane layoutY="-9.0" prefHeight="610.0" prefWidth="215.0" styleClass="right-bar">
+               <stylesheets>
+                  <URL value="@fullpackstyling.css" />
+                  <URL value="@adminaddcompetition.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane layoutX="243.0" layoutY="90.0" prefHeight="421.0" prefWidth="498.0" style="-fx-background-radius: 20;" styleClass="right-bar">
+               <children>
+                  <ListView fx:id="ListeItemsEquipe" layoutX="24.0" layoutY="164.0" prefHeight="205.0" prefWidth="378.0" />
+                  <TextField fx:id="search" layoutX="40.0" layoutY="32.0" style="-fx-background-radius: 20;" />
+                  <Label layoutX="391.0" layoutY="6.0" text="Operations" textFill="WHITE" />
+                  <ChoiceBox fx:id="operations" layoutX="327.0" layoutY="32.0" prefWidth="150.0" style="-fx-background-radius: 20;" />
+                  <Button fx:id="rfch" layoutX="436.0" layoutY="369.0" mnemonicParsing="false" onAction="#AddEquipe" styleClass="add-btn1" text="Ajouter" />
+               </children>
+            </AnchorPane>
+            <Pane layoutX="464.0" layoutY="14.0" prefHeight="76.0" prefWidth="277.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@fullpackstyling.css">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" text="Admin" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="76.0" fitWidth="59.0" layoutX="217.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@IMG/coach.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="258.0" layoutY="59.0" prefHeight="31.0" prefWidth="215.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@fullpackstyling.css">
+               <children>
+                  <Label layoutX="31.0" layoutY="1.0" prefHeight="17.0" prefWidth="221.0" text="Equipe Index" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <stylesheets>
+            <URL value="@fullpackstyling.css" />
+            <URL value="@adminaddcompetition.css" />
+         </stylesheets>
+      </AnchorPane>
    </children>
+   <stylesheets>
+      <URL value="@fullpackstyling.css" />
+      <URL value="@adminaddcompetition.css" />
+   </stylesheets>
 </AnchorPane>
