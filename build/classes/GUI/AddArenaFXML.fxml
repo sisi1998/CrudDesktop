@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="670.0" style="-fx-background-color: #1d3557;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AddArenaFXMLController">
+   <children>
+      <Pane layoutX="290.0" layoutY="101.0" prefHeight="264.0" prefWidth="290.0" style="-fx-background-color: #1d3257;">
+         <children>
+             
+
+             
+            <Label alignment="CENTER" layoutX="34.0" layoutY="78.0" text="Nom : " textFill="#e88904">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" layoutX="30.0" layoutY="124.0" text="Surface :" textFill="#e88904">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" layoutX="30.0" layoutY="164.0" text="Adresse : " textFill="#e88904">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="210.0" text="Image : " textFill="#e88904">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <TextField fx:id="txtn" alignment="CENTER" layoutX="123.0" layoutY="71.0" />
+            <TextField fx:id="txtp" alignment="CENTER" layoutX="123.0" layoutY="120.0" />
+            <TextField fx:id="txta" alignment="CENTER" layoutX="123.0" layoutY="165.0" />
+            <TextField fx:id="URLImage" alignment="CENTER" layoutX="123.0" layoutY="211.0" />
+         </children>
+      </Pane>
+      <VBox layoutX="-2.0" prefHeight="542.0" prefWidth="206.0" style="-fx-background-color: #27436B;">
+         <children>
+                    <Button fx:id="btnf" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="30.0" prefWidth="205.0" text="Ajouter Arene" />
+                  <Button fx:id="btnArena" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="29.0" prefWidth="205.0" text="Gestion Arena" />
+            
+                          <Button fx:id="btnCours" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="29.0" prefWidth="206.0" text="Gestion Cours" />
+                  <Button fx:id="btnl" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="31.0" prefWidth="206.0" text="Lister Cours" />
+                  <Button fx:id="btnx" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="34.0" prefWidth="206.0" text="Accueil" />
+         </children></VBox>
+      <Button layoutX="258.0" layoutY="397.0" mnemonicParsing="false" onAction="#AddImage" prefHeight="32.0" prefWidth="94.0" text="addimage" />
+      
+      <Button layoutX="255.0" layoutY="444.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="42.0" prefWidth="101.0" text="Ajouter" />
+      <ImageView fx:id="Imagex" fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="229.0" layoutY="57.0" prefHeight="54.0" prefWidth="270.0" text="Ajouter Arene" textFill="#e88904">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
