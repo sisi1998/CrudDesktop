@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.RegisterController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="214.0" styleClass="right-bar">
+         <stylesheets>
+            <URL value="@fullpackstyling.css" />
+            <URL value="@adminaddcompetition.css" />
+         </stylesheets>
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="122.0" layoutX="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG/342556323_704667194998998_8201126061904933936_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="214.0" layoutY="277.0" prefHeight="323.0" prefWidth="589.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="ImgV" fitHeight="114.0" fitWidth="149.0" layoutX="403.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnImg" layoutX="441.0" layoutY="48.0" mnemonicParsing="false" onAction="#AddPicture" styleClass="chosen-fruit-card" stylesheets="@../styleSheets/balha.css" text="add image" textFill="WHITE" />
+            <ChoiceBox fx:id="roles" layoutX="240.0" layoutY="150.0" prefWidth="150.0" styleClass="button2" />
+           
+      
+            <PasswordField fx:id="pwd" layoutX="240.0" layoutY="107.0" promptText="Password" styleClass="button2" />
+            <TextField fx:id="email" layoutX="240.0" layoutY="60.0" promptText="Email" styleClass="button2" />
+            <TextField fx:id="prenom" layoutX="66.0" layoutY="107.0" promptText="Prenom" styleClass="button2" />
+            <TextField fx:id="nom" layoutX="66.0" layoutY="60.0" promptText="Nom" styleClass="button2" />
+            <DatePicker fx:id="dateB" layoutX="54.0" layoutY="150.0" />
+            <Button fx:id="register" layoutX="273.0" layoutY="210.0" mnemonicParsing="false" onAction="#Register" styleClass="button2" text="Register" textFill="WHITE">
+               <stylesheets>
+                  <URL value="@../styleSheets/balha.css" />
+                  <URL value="@adminaddcompetition.css" />
+                  <URL value="@fullpackstyling.css" />
+               </stylesheets>
+            </Button>
+            <Text layoutX="29.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Form" />
+         </children>
+         <stylesheets>
+            <URL value="@adminaddcompetition.css" />
+            <URL value="@fullpackstyling.css" />
+         </stylesheets>
+      </AnchorPane>
+      <Button fx:id="back" layoutX="232.0" layoutY="557.0" mnemonicParsing="false" onAction="#retourLogin" styleClass="chosen-fruit-card" stylesheets="@../styleSheets/balha.css" text="Back" textFill="WHITE" />
+      <Label fx:id="er1" layoutX="541.0" layoutY="146.0" text="  " textFill="RED" />
+      <Label fx:id="er2" layoutX="541.0" layoutY="190.0" text="  " textFill="RED" />
+      <Label fx:id="er3" layoutX="541.0" layoutY="230.0" text="  " textFill="RED" />
+      <Label fx:id="er4" layoutX="541.0" layoutY="271.0" text="  " textFill="RED" />
+      <Label fx:id="er5" layoutX="541.0" layoutY="318.0" text="  " textFill="RED" />
+      <Label fx:id="er6" layoutX="541.0" layoutY="352.0" text="  " textFill="RED" />
+      <ImageView fitHeight="277.0" fitWidth="589.0" layoutX="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IMG/gallery-slide-img1.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@adminaddcompetition.css" />
+      <URL value="@fullpackstyling.css" />
+   </stylesheets>
+</AnchorPane>

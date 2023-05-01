@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ModifEquipeController">
+    <children>
+      <Label layoutX="64.0" layoutY="150.0" text="nombre joueurs:" />
+      <Label layoutX="124.0" layoutY="123.0" text="nom:" />
+      <Label layoutX="111.0" layoutY="174.0" text="origine:" />
+      <Label layoutX="138.0" layoutY="97.0" text="id:" />
+      <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" layoutX="386.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="id" layoutX="188.0" layoutY="97.0" text="Label" />
+      <Label layoutX="108.0" layoutY="33.0" text="modifier equipe">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <Button fx:id="chooseImg" layoutX="436.0" layoutY="38.0" mnemonicParsing="false" onAction="#chooseImage" text="importer image" />
+      <TextField fx:id="txtnom" layoutX="189.0" layoutY="119.0" />
+      <TextField fx:id="txtprenom" layoutX="189.0" layoutY="146.0" />
+      <TextField fx:id="txtemail" layoutX="189.0" layoutY="170.0" />
+      <Button fx:id="btnSave" layoutX="274.0" layoutY="304.0" mnemonicParsing="false" onAction="#onClickSave" text="Save" />
+      <HBox fx:id="ratingPane" layoutX="376.0" layoutY="225.0" prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
