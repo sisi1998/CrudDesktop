@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" stylesheets="@adminaddcompetition.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UserAffichController">
+    <children>
+      <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-radius: 70;" styleClass="linear-grad">
+         <children>
+            <AnchorPane layoutX="-2.0" prefHeight="600.0" prefWidth="220.0" styleClass="right-bar">
+               <stylesheets>
+                  <URL value="@fullpackstyling.css" />
+                  <URL value="@adminaddcompetition.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane layoutX="244.0" layoutY="138.0" prefHeight="375.0" prefWidth="456.0" style="-fx-background-radius: 20;" styleClass="right-bar">
+               <children>
+                  <Label layoutX="81.0" layoutY="63.0" prefHeight="18.0" prefWidth="27.0" text="id:" textFill="WHITE" />
+                  <Label fx:id="id" layoutX="159.0" layoutY="64.0" text="Label" textFill="WHITE" />
+                  <Label layoutX="76.0" layoutY="102.0" prefHeight="18.0" prefWidth="27.0" text="nom:" textFill="WHITE" />
+                  <Label layoutX="70.0" layoutY="145.0" text="prenom:" textFill="WHITE" />
+                  <Label fx:id="prenom" layoutX="160.0" layoutY="145.0" text="Label" textFill="WHITE" />
+                  <Label layoutX="74.0" layoutY="274.0" text="Email:" textFill="WHITE" />
+                  <Label fx:id="email" layoutX="161.0" layoutY="274.0" text="Label" textFill="WHITE" />
+                  <Label layoutX="77.0" layoutY="188.0" text="Role:" textFill="WHITE" />
+                  <Label fx:id="role" layoutX="159.0" layoutY="188.0" text="Label" textFill="WHITE" />
+                  <Label layoutX="76.0" layoutY="235.0" text="birth:" textFill="WHITE" />
+                  <Label fx:id="birth" layoutX="160.0" layoutY="235.0" text="Label" textFill="WHITE" />
+                  <Label layoutX="74.0" layoutY="308.0" text="Block:" textFill="WHITE" />
+                  <Label fx:id="block" layoutX="164.0" layoutY="308.0" text="non" textFill="GREEN" />
+                  <Label fx:id="nom" layoutX="161.0" layoutY="103.0" text="nom" textFill="WHITE" />
+                  <ImageView fx:id="image" fitHeight="177.0" fitWidth="181.0" layoutX="234.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <stylesheets>
+                  <URL value="@adminaddcompetition.css" />
+                  <URL value="@fullpackstyling.css" />
+               </stylesheets>
+            </AnchorPane>
+            <Label layoutX="529.0" layoutY="539.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutX="284.0" layoutY="107.0" prefHeight="31.0" prefWidth="249.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@fullpackstyling.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="1.0" prefHeight="17.0" prefWidth="221.0" text="Affichage User" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="529.0" layoutY="50.0" prefHeight="88.0" prefWidth="210.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@fullpackstyling.css">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" text="Admin" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="112.0" fitWidth="71.0" layoutX="138.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@IMG/coach.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+         <stylesheets>
+            <URL value="@adminaddcompetition.css" />
+            <URL value="@fullpackstyling.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>
