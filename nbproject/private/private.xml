@@ -12,7 +12,23 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Entities/Equipe.java</file>
+<<<<<<< HEAD
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/GUI/PDFGenerator.java</file>
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/GUI/ListPerformanceController.java</file>
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/GUI/UserModifyController.java</file>
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/GUI/mainGui.java</file>
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/GUI/AdminUpdateCompetitionController.java</file>
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/GUI/AddPerformanceController.java</file>
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/GUI/LoginController.java</file>
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/GUI/AdminAddCompetitionController.java</file>
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/Entities/Arena.java</file>
+            <file>file:/C:/Users/Siwar/Desktop/Integration/PidevDesktop/src/GUI/AcceuilController.java</file>
+=======
+            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/AcceuilController.java</file>
+            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Utils/AlertUtils.java</file>
+            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/mainGui.java</file>
+            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Utils/Constants.java</file>
+>>>>>>> 2b5ce0e63cfbe4a390fd7e3a99074abe768572da
         </group>
     </open-files>
 </project-private>
