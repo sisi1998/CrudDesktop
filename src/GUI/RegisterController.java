@@ -175,7 +175,7 @@ public class RegisterController implements Initializable {
             Path sourcePath = selectedFile.toPath();
             
             System.out.println(sourcePath.toString());
-            Path targetPath = Paths.get("src/image/" + selectedFile.getName());
+            Path targetPath = Paths.get("./src/image/" + selectedFile.getName());
             Files.copy(sourcePath, targetPath);
     }
         PasswordCrypt pc = new PasswordCrypt();

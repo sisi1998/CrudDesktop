@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="500.0" style="-fx-background-color: white" stylesheets="@../utils/MainStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginGController">
+
+    <VBox spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </padding>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User :">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+            <VBox.margin>
+                <Insets left="5.0" />
+            </VBox.margin>
+        </Text>
+        <ComboBox fx:id="userCB" promptText="Choisir user" styleClass="form-control" />
+
+    </VBox>
+
+    <Button layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#frontend" prefHeight="37.0" prefWidth="126.0" styleClass="success-button" text="Front" textFill="#FFFFFF" AnchorPane.rightAnchor="50.0">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Button>
+
+    <Button mnemonicParsing="false" onAction="#backend" styleClass="success-button" text="Back" textFill="#FFFFFF" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Button>
+</AnchorPane>
