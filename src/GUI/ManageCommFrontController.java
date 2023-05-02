@@ -55,7 +55,7 @@ public class ManageCommFrontController implements Initializable {
                 System.out.println("NullPointerException");
             }
         } else {
-            produitText.setText("Produit selectionné : " + com.goacademy.gui.front.produit.ShowAllController.currentProduit);
+            produitText.setText("Produit selectionné : " + ShowAllProdFrontController.currentProduit);
 
             topText.setText("Ajouter commande");
             btnAjout.setText("Ajouter");
@@ -70,13 +70,13 @@ public class ManageCommFrontController implements Initializable {
 
             if (currentCommande == null) {
                 Commande commande = new Commande(
-                        com.goacademy.gui.front.produit.ShowAllController.currentProduit,
+                        ShowAllProdFrontController.currentProduit,
                         MainApp.session,
                         Integer.parseInt(nombreProduitTF.getText()),
-                        Math.round(com.goacademy.gui.front.produit.ShowAllController.currentProduit.getPrix()) * Integer.parseInt(nombreProduitTF.getText())
+                        Math.round(ShowAllProdFrontController.currentProduit.getPrix()) * Integer.parseInt(nombreProduitTF.getText())
                 );
 
-                if (com.goacademy.gui.front.produit.ShowAllController.currentProduit.getStock() < Integer.parseInt(nombreProduitTF.getText())) {
+                if (ShowAllProdFrontController.currentProduit.getStock() < Integer.parseInt(nombreProduitTF.getText())) {
                     AlertUtils.makeErrorNotificationWithApi("Rupture de stock");
                 } else {
 
@@ -94,7 +94,7 @@ public class ManageCommFrontController implements Initializable {
                                 }
                             }
                             AlertUtils.makeSuccessNotification("Commande ajouté avec succés");
-                            MainWindowController.getInstance().loadInterface(Constants.FXML_FRONT_DISPLAY_ALL_COMMANDE);
+                            MainWindowFrontController.getInstance().loadInterface(Constants.FXML_FRONT_DISPLAY_ALL_COMMANDE);
                         } else {
                             AlertUtils.makeError("Error");
                         }
@@ -114,8 +114,8 @@ public class ManageCommFrontController implements Initializable {
                 commande.setId(currentCommande.getId());
                 if (CommandeService.getInstance().edit(commande)) {
                     AlertUtils.makeSuccessNotification("Commande modifié avec succés");
-                    ShowAllController.currentCommande = null;
-                    MainWindowController.getInstance().loadInterface(Constants.FXML_FRONT_DISPLAY_ALL_COMMANDE);
+                    ShowAllComFrontController.currentCommande = null;
+                    MainWindowFrontController.getInstance().loadInterface(Constants.FXML_FRONT_DISPLAY_ALL_COMMANDE);
                 } else {
                     AlertUtils.makeError("Error");
                 }

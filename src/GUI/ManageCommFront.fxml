@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane styleClass="background-white" stylesheets="@../../../utils/MainStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.goacademy.gui.front.commande.ManageController">
+<AnchorPane styleClass="background-white" stylesheets="@../../../utils/MainStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ManageCommFrontController">
     <StackPane layoutY="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <Text fx:id="topText" strokeType="OUTSIDE" strokeWidth="0.0" text="texte haut">
             <font>

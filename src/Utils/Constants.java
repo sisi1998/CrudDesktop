@@ -19,7 +19,7 @@ public class Constants {
     public static final String FXML_BACK_MANAGE_CATEGORIE = "/GUI/ManageCategoBack.fxml"; //3
     public static final String FXML_FRONT_DISPLAY_ALL_CATEGORIE = "/GUI/ShowAllCategoFront.fxml";//7
     public static final String FXML_FRONT_MODEL_CATEGORIE = "/GUI/ModelCategoFront.fxml";//7
-    public static final String FXML_FRONT_MANAGE_CATEGORIE = "/com/goacademy/gui/front/categorie/Manage.fxml";
+   public static final String FXML_FRONT_MANAGE_CATEGORIE = "/com/goacademy/gui/front/categorie/Manage.fxml";
 
     // COMMANDE
     public static final String FXML_BACK_DISPLAY_ALL_COMMANDE = "/GUI/ShowAllCommBack.fxml"; //4
