@@ -6,6 +6,7 @@
 package GUI;
 
 import Entities.Arena;
+import Entities.User;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -32,6 +33,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import Services.ArenaService;
 import javafx.scene.control.Alert;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -46,14 +48,10 @@ public class AddArenaFXMLController implements Initializable {
     private TextField txtp;
     @FXML
     private TextField txta;
-    @FXML
-    private Label label;
      private Button AddImage;
     @FXML
     private TextField URLImage;
-      @FXML
-    private Button btn;
-
+private User userc;
    
        @FXML
     private Button btnArena;
@@ -69,6 +67,8 @@ public class AddArenaFXMLController implements Initializable {
     private Button btnl;
        @FXML
     private Button btnf;
+    @FXML
+    private Text sess;
          @FXML
     private void handleButtonClicks(ActionEvent mouseEvent) {
         if (mouseEvent.getSource() ==btnCours) {
@@ -163,4 +163,14 @@ public class AddArenaFXMLController implements Initializable {
         // TODO
     }    
     
-}
+    
+     public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+        
+        }
+    
+    
+    }
+

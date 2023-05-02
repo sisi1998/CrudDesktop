@@ -5,6 +5,7 @@
 package GUI;
 
 import Entities.PerformanceEquipe;
+import Entities.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -15,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import Services.PerformanceEquipeService;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -45,7 +47,10 @@ public class AjoutPerformanceEquipeController implements Initializable {
     @FXML
     private Label e5;
     @FXML
-    private Label id;
+    private Text sess;
+    @FXML
+    private Button btn_id;
+    private User userc;
 
     /**
      * Initializes the controller class.
@@ -98,6 +103,11 @@ public class AjoutPerformanceEquipeController implements Initializable {
         Stage stage = (Stage) id_but_encaisses.getScene().getWindow();
             stage.close();
        
+    }
+    public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
     }
     
 }

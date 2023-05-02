@@ -5,6 +5,7 @@
 package GUI;
 
 import Entities.Equipe;
+import Entities.User;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -25,6 +26,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import Services.EquipeService;
 import java.util.ResourceBundle;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -51,6 +53,9 @@ private Equipe equipe;
     private Button btnSave;
     @FXML
     private HBox ratingPane;
+    @FXML
+    private Text sess;
+    private User userc;
 
     /**
      * Initializes the controller class.
@@ -155,5 +160,8 @@ private Equipe equipe;
             
             
     }
-    
+    public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+}
 }

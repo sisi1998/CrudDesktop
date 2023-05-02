@@ -8,6 +8,7 @@ package GUI;
 import Entities.Arena;
 import Entities.Cours;
 import Entities.Equipe;
+import Entities.User;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
@@ -33,6 +34,7 @@ import javafx.stage.Stage;
 import Services.ArenaService;
 import Services.CService;
 import Services.EService;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -61,10 +63,8 @@ public class ShowCoursFXMLController implements Initializable {
     @FXML
     private TableColumn<Cours, Date> dates;
 
-       @FXML
-    ChoiceBox<String> choicem= new ChoiceBox<>();
-    @FXML
-  ChoiceBox<String> choicex= new ChoiceBox<>();
+       ChoiceBox<String> choicem= new ChoiceBox<>();
+    ChoiceBox<String> choicex= new ChoiceBox<>();
       @FXML
      private TextField finda;
        @FXML
@@ -81,6 +81,13 @@ public class ShowCoursFXMLController implements Initializable {
     private Button btnl;
        @FXML
     private Button btnf;
+    private User userc;
+       
+       
+           public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+}
      
      
      
@@ -88,6 +95,8 @@ public class ShowCoursFXMLController implements Initializable {
      ArenaService ck =new ArenaService();
      CService csxx =new CService();
     EService vk =new EService();
+    @FXML
+    private Text sess;
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {

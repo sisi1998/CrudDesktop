@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="754.0" style="-fx-background-color: #1d3557;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CoursfronFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="button2" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CoursfronFXMLController">
    <children>
-      <ChoiceBox fx:id="ChoiceEqui" layoutX="486.0" layoutY="79.0" onMouseClicked="#FindMeCours" prefHeight="25.0" prefWidth="199.0" />
-      <Label layoutX="244.0" layoutY="67.0" prefHeight="43.0" prefWidth="183.0" text="Choisissez votre équipe :">
+      <ChoiceBox fx:id="ChoiceEqui" layoutX="486.0" layoutY="79.0" onMouseClicked="#FindMeCours" prefHeight="25.0" prefWidth="199.0" styleClass="button1" />
+      <Label layoutX="244.0" layoutY="67.0" prefHeight="43.0" prefWidth="183.0" text="Choisissez votre équipe :" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
@@ -27,12 +31,32 @@
          </columns>
       </TableView>
 
-      <TextField fx:id="findar" layoutX="507.0" layoutY="381.0" />
-      <Label layoutX="429.0" layoutY="378.0" prefHeight="25.0" prefWidth="59.0" text="Arene :">
+      <TextField fx:id="findar" layoutX="507.0" layoutY="381.0" style="-fx-background-radius: 20;" />
+      <Label layoutX="429.0" layoutY="378.0" prefHeight="25.0" prefWidth="59.0" text="Arene :" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <VBox prefHeight="513.0" prefWidth="193.0" style="-fx-background-color: #27436B;" />
+      <VBox prefHeight="600.0" prefWidth="193.0" styleClass="right-bar">
+         <stylesheets>
+            <URL value="@fullpackstyling.css" />
+            <URL value="@adminaddcompetition.css" />
+         </stylesheets>
+         <children>
+            <ImageView fx:id="competition" fitHeight="127.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG/342556323_704667194998998_8201126061904933936_n.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="sess" fill="#83d483" strokeType="OUTSIDE" strokeWidth="0.0" text="val_">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children></VBox>
    </children>
+   <stylesheets>
+      <URL value="@fullpackstyling.css" />
+      <URL value="@adminaddcompetition.css" />
+   </stylesheets>
 </AnchorPane>

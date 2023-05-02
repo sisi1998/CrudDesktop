@@ -29,6 +29,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -78,6 +79,14 @@ public class UpdatePerformanceController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
+    @FXML
+    private Text sess;
+    private User userc;
+      public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+}
     @Override
     public void initialize(URL url, ResourceBundle rb) {
          FXMLLoader loader = new FXMLLoader();

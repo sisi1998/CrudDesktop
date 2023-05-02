@@ -19,7 +19,7 @@ public class mainGui extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-      Parent root=FXMLLoader.load(getClass().getResource("homeFXML.fxml"));
+      Parent root=FXMLLoader.load(getClass().getResource("login.fxml"));
     // Parent root=FXMLLoader.load(getClass().getResource("motDePasseOublie1.fxml"));
      //  Parent root=FXMLLoader.load(getClass().getResource("ProfileUser.fxml"));
     //  Parent root=FXMLLoader.load(getClass().getResource("UserIndex.fxml"));

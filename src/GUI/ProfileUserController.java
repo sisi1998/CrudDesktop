@@ -22,6 +22,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import Services.UserService;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -47,23 +48,32 @@ private User userc;
     private Label birth;
     @FXML
     private Button back;
+    @FXML
+    private Text sess;
+    
+    
 
     /**
      * Initializes the controller class.
      */
-       
     
     public void getSession(User userc){
-        this.userc=userc;
-        emailLabel.setText(userc.getEmail());
-        nomLabel.setText(userc.getNom());
-        prenomLabel.setText(userc.getPrenom());
-        roleLabel.setText(userc.getRole());
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+}
+       
+    
+    public void getProfile(User userProf){
+        this.userc=userProf;
+        emailLabel.setText(userProf.getEmail());
+        nomLabel.setText(userProf.getNom());
+        prenomLabel.setText(userProf.getPrenom());
+        roleLabel.setText(userProf.getRole());
         
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        birth.setText(formatter.format(userc.getDate_birth()));
+        birth.setText(formatter.format(userProf.getDate_birth()));
     
-   Image image1 = new Image(getClass().getResourceAsStream("/image/"+userc.getImage()));
+   Image image1 = new Image(getClass().getResourceAsStream("/image/"+userProf.getImage()));
         usrImg.setImage(image1);
 //        
 //        

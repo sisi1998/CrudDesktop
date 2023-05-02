@@ -7,18 +7,23 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="789.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AcceuilController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="789.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AcceuilController">
    <children>
       <AnchorPane fx:id="sidePane" layoutY="186.0" prefHeight="413.0" prefWidth="240.0" styleClass="right-bar" stylesheets="@adminaddcompetition.css">
          <children>
             <Button fx:id="backlog" layoutX="82.0" layoutY="312.0" mnemonicParsing="false" onAction="#GoBacklog" prefHeight="29.0" prefWidth="77.0" styleClass="add-btn" text="Backlog" />
-            <ImageView fx:id="usrImg" fitHeight="218.0" fitWidth="204.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
             <Button layoutX="62.0" layoutY="252.0" mnemonicParsing="false" onAction="#MyProfile" prefHeight="45.0" prefWidth="119.0" styleClass="add-btn" text="mon profile">
                <stylesheets>
                   <URL value="@adminaddcompetition.css" />
                   <URL value="@fullpackstyling.css" />
                </stylesheets>
             </Button>
+            <Button layoutX="54.0" layoutY="39.0" mnemonicParsing="false" onAction="#gomag" prefHeight="30.0" prefWidth="150.0" styleClass="chosen-fruit-card" text="Notre Magasin" />
+            <Button layoutX="54.0" layoutY="77.0" mnemonicParsing="false" onAction="#goequipe" prefHeight="30.0" prefWidth="150.0" styleClass="chosen-fruit-card" text="Nos Equipes" />
+            <Button fx:id="gocomp" layoutX="54.0" layoutY="1.0" mnemonicParsing="false" onAction="#gotoComp" prefHeight="30.0" prefWidth="150.0" styleClass="chosen-fruit-card" text="Nos Competitions" />
+            <Button layoutX="54.0" layoutY="117.0" mnemonicParsing="false" onAction="#goperfE" prefHeight="30.0" prefWidth="150.0" styleClass="chosen-fruit-card" text="Nos performances" />
+            <Button layoutX="54.0" layoutY="156.0" mnemonicParsing="false" onAction="#gopeerj" prefHeight="30.0" prefWidth="150.0" styleClass="chosen-fruit-card" text="Performances Joueurs" />
+            <Button layoutX="56.0" layoutY="194.0" mnemonicParsing="false" onAction="#goprod" text="Nos produits" />
          </children>
       </AnchorPane>
       <Label fx:id="sess" layoutX="602.0" layoutY="149.0" text="nom_user" textFill="#00993d" />
@@ -37,6 +42,8 @@
             <Image url="@IMG/broad-cup-img.jpg" />
          </image>
       </ImageView>
+      <Button fx:id="gocours" layoutX="52.0" layoutY="151.0" mnemonicParsing="false" onAction="#gotoarena" prefHeight="30.0" prefWidth="150.0" styleClass="chosen-fruit-card" text="Nos Cours" />
+      <ImageView fx:id="usrImg" fitHeight="175.0" fitWidth="204.0" layoutX="374.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true" />
    </children>
    <stylesheets>
       <URL value="@adminaddcompetition.css" />

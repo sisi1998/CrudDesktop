@@ -8,6 +8,7 @@ package GUI;
 import Entities.Arena;
 import Entities.Competition;
 import Entities.Equipe;
+import Entities.User;
 import Services.CompetitionService;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTimePicker;
@@ -96,6 +97,7 @@ public class AdminUpdateCompetitionController implements Initializable {
     private Button compC;
     @FXML
     private Button PerfC;
+    private User userc;
 
     /**
      * Initializes the controller class.
@@ -336,6 +338,11 @@ public void setImage(String img) {
                             stage.show();
     }
 
-                           
+//                  public void getSession(User userc){
+//         this.userc=userc;
+//    this.sess.setText(userc.getEmail());
+//    
+//        
+//        }          
 }
 

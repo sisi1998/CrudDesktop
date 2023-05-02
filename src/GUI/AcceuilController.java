@@ -42,6 +42,10 @@ private User userc;
     private Button backlog;
     @FXML
     private ImageView competition;
+    @FXML
+    private Button gocomp;
+    @FXML
+    private Button gocours;
 
     /**
      * Initializes the controller class.
@@ -70,16 +74,12 @@ usrImg.setPreserveRatio(false);
 
     @FXML
     private void GoBacklog(ActionEvent event) throws IOException {
-         FXMLLoader loader= new FXMLLoader(getClass().getResource("UserIndex.fxml"));
-        Parent root=loader.load();
-        
-        
-        
-
-    Scene scene = new Scene(root);
-    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    stage.setScene(scene);
-    stage.show();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminPage.fxml"));
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(loader.load()));
+                      // AdminPageController controller = loader.getController();
+                       
+                        stage.show();
     }
 
     @FXML
@@ -90,7 +90,7 @@ usrImg.setPreserveRatio(false);
         ProfileUserController cc = loader.getController();
         
         
-        cc.getSession(userc);
+        cc.getProfile(userc);
         
 
     Scene scene = new Scene(root);
@@ -98,7 +98,89 @@ usrImg.setPreserveRatio(false);
     stage.setScene(scene);
     stage.show();
     }
+
+    @FXML
+    private void gotoarena(ActionEvent event) throws IOException {
+        FXMLLoader loader= new FXMLLoader(getClass().getResource("homeFXML.fxml"));
+        Parent root=loader.load();
+        
+       AddArenaFXMLController cc = loader.getController();
+        
+        
+        cc.getSession(userc);
+         Scene scene = new Scene(root);
+    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    stage.setScene(scene);
+    stage.show();
+        
+    }
+
+    @FXML
+    private void gomag(ActionEvent event) throws IOException {
+         FXMLLoader loader= new FXMLLoader(getClass().getResource("ShowAllProdFront.fxml"));
+        Parent root=loader.load();
+        
+       AddArenaFXMLController cc = loader.getController();
+        
+        
+        cc.getSession(userc);
+         Scene scene = new Scene(root);
+    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    stage.setScene(scene);
+    stage.show();
+    }
+
+    @FXML
+    private void goequipe(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("EquipeIndex.fxml"));
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(loader.load()));
+                        EquipeIndexController controller = loader.getController();
+                        controller.getSession(userc);
+                        stage.show();
+    }
+
+    @FXML
+    private void goperfE(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PerformanceEquipeIndex.fxml"));
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(loader.load()));
+                        PerformanceEquipeIndexController controller = loader.getController();
+                        controller.getSession(userc);
+                        stage.show();
+    }
+
+    @FXML
+    private void gotoComp(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("CompetitionFront.fxml"));
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(loader.load()));
+                        CompetitionFrontController controller = loader.getController();
+                        controller.getSession(userc);
+                        stage.show();
+    }
+
+    @FXML
+    private void gopeerj(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("PerformanceFront.fxml"));
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(loader.load()));
+                        PerformanceFrontController controller = loader.getController();
+                        controller.getSession(userc);
+                        stage.show();
+    }
+
+    @FXML
+    private void goprod(ActionEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowAllProdFront.fxml"));
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(loader.load()));
+                       // PerformanceFrontController controller = loader.getController();
+                       // controller.getSession(userc);
+                        stage.show();
+    }
+    }
  
 
      
-}
+

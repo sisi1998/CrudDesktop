@@ -6,6 +6,7 @@
 package GUI;
 
 import Entities.Competition;
+import Entities.User;
 import java.net.URISyntaxException;
 import static GUI.AdminListCompetitionController.competition2;
 import Services.CompetitionService;
@@ -38,6 +39,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -82,6 +84,9 @@ public class CompetitionFrontController implements Initializable {
     private Button prevC;
     @FXML
     private Button compButton1;
+    @FXML
+    private Text sess;
+    private User userc;
 
     /**
      * Initializes the controller class.
@@ -275,11 +280,15 @@ private void imgTOyou(MouseEvent event) throws URISyntaxException, IOException {
     }
 
 
-
+ public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
 
 
 
 
     }
+}
    
 

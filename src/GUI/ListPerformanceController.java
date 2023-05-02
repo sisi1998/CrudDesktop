@@ -39,6 +39,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
@@ -102,7 +103,10 @@ public class ListPerformanceController implements Initializable {
     @FXML
     private Button PerfC;
     @FXML
-    private Button stats;
+    private Text sess;
+    @FXML
+    private Button hhhh;
+    private User userc;
     
     
     
@@ -284,6 +288,13 @@ public class ListPerformanceController implements Initializable {
                             stage.setScene(new Scene(root));
                             stage.show();
     }
+    
+     public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+
+}
     
    
 }

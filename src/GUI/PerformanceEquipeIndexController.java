@@ -6,6 +6,7 @@ package GUI;
 
 import Entities.Equipe;
 import Entities.PerformanceEquipe;
+import Entities.User;
 import GUI.AffichEquipeController;
 import GUI.ModifEquipeController;
 import java.io.File;
@@ -29,6 +30,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import Services.PerformanceEquipeService;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -40,6 +42,13 @@ public class PerformanceEquipeIndexController implements Initializable {
 public static PerformanceEquipeIndexController getInstance() {
         return instance;
     }
+    private User userc;
+public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+
+}
 
 PerformanceEquipeService us = new PerformanceEquipeService();
 List<PerformanceEquipe> listEquipe = us.readAll();
@@ -52,6 +61,8 @@ List<PerformanceEquipe> listEquipe = us.readAll();
     private Button rfch;
     @FXML
     private TextField search;
+    @FXML
+    private Text sess;
 
     /**
      * Initializes the controller class.

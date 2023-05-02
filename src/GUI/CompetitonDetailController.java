@@ -8,6 +8,7 @@ package GUI;
 import Entities.Arena;
 import Entities.Competition;
 import Entities.Equipe;
+import Entities.User;
 import Services.CompetitionService;
 import java.awt.Desktop;
 import java.io.File;
@@ -34,6 +35,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -74,6 +76,9 @@ public class CompetitonDetailController implements Initializable {
     private Button back;
     @FXML
     private Button perfB;
+    @FXML
+    private Text sess;
+    private User userc;
     /**
      * Initializes the controller class.
      */
@@ -222,6 +227,10 @@ public void setId(int id) {
     @FXML
     private void TopeCompe(ActionEvent event) {
     }
+ public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
 
-
+}
 }

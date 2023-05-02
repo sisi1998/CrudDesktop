@@ -1,5 +1,6 @@
 package GUI;
 
+import Entities.User;
 import Services.PerformanceCService;
 import java.io.IOException;
 import java.net.URL;
@@ -19,6 +20,7 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.chart.StackedBarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class PerformanceStatsController implements Initializable {
@@ -39,6 +41,17 @@ public class PerformanceStatsController implements Initializable {
     private Button compC;
     @FXML
     private Button PerfC;
+    @FXML
+    private Text sess;
+    
+    
+    private User userc;
+    public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+
+}
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

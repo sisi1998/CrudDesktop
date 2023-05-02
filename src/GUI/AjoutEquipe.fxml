@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutEquipeController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutEquipeController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-radius: 70;" styleClass="linear-grad">
          <children>
@@ -42,6 +42,11 @@
                         <Image url="@IMG/coach.png" />
                      </image>
                   </ImageView>
+                  <Text fx:id="sess" fill="#83d483" layoutX="26.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="val_">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
             <Pane layoutX="272.0" layoutY="136.0" prefHeight="31.0" prefWidth="190.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@fullpackstyling.css">

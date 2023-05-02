@@ -76,6 +76,12 @@ public class LoginController implements Initializable {
        
        if(gg==null){
        error.setText("User n'existe pas");
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Echec authentification");
+                alert.setHeaderText("User n'existe pas");
+                alert.setContentText("Veuillez vérifier");
+                alert.showAndWait();
+                error.setText("");
        return;
        //  gg.getMdp().equals(pwd.getText())
        }else if (pc.décryptage(pwd.getText(),gg.getMdp())){error.setText("mdp correct");
@@ -154,7 +160,13 @@ Scene scene = new Scene(root);
     stage.setScene(scene);
     stage.show();
     }
-    
+    private void showAlert(String title, String message) {
+    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    alert.setTitle(title);
+    alert.setHeaderText(null);
+    alert.setContentText(message);
+    alert.showAndWait();
+}
     
     
 }

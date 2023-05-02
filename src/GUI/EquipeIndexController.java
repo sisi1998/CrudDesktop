@@ -5,6 +5,7 @@
 package GUI;
 
 import Entities.Equipe;
+import Entities.User;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -26,6 +27,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import Services.EquipeService;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -49,6 +51,9 @@ public static EquipeIndexController getInstance() {
     List<Equipe> listEquipe = us.readAll();
     @FXML
     private TextField search;
+    @FXML
+    private Text sess;
+    private User userc;
    
     /**
      * Initializes the controller class.
@@ -139,5 +144,11 @@ public static EquipeIndexController getInstance() {
     ListeItemsEquipe.getItems().clear();
     ArrayList<Equipe> users = us.SearchByNom(searchText);
     ListeItemsEquipe.getItems().addAll(users);
+}
+    public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+
 }
 }

@@ -8,6 +8,7 @@ package GUI;
 import Entities.Arena;
 import Entities.Cours;
 import Entities.Equipe;
+import Entities.User;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
@@ -33,6 +34,8 @@ import javafx.scene.input.MouseEvent;
 import Services.ArenaService;
 import Services.CService;
 import Services.EService;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -48,23 +51,23 @@ public class CoursfronFXMLController implements Initializable {
     private TableColumn<Cours, String> descC;
     @FXML
     private TableColumn<Cours, String> arC;
-@FXML
-    private TableColumn<Cours, String> equiC;
     @FXML
     private TableColumn<Cours, Time> duC;
     @FXML
     private TableColumn<Cours, Date> datesC;
      @FXML
     ChoiceBox<String> ChoiceEqui= new ChoiceBox<>();
-     @FXML
-    ListView<Cours> ListCours;
+     ListView<Cours> ListCours;
       @FXML
      private TextField findar;
-       @FXML
-     private TextField findeq; 
    EService k =new EService();
    CService op =new CService();
    ArenaService Arx =new ArenaService();
+    @FXML
+    private ImageView competition;
+    @FXML
+    private Text sess;
+    private User userc;
     /**
      * Initializes the controller class.
      */
@@ -166,7 +169,12 @@ List<Arena> Arenas= Arx.readAll();
         }
         }
     }
+public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
 
+}
 
 
 }

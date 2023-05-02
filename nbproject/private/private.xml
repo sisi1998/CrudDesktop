@@ -12,24 +12,7 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Entities/Arena.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/CoursfronFXMLController.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/ShowCoursFXMLController.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/FXMLDocumentController.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Entities/Equipe.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/AddArenaFXMLController.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/homeFXML.fxml</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Entities/Competition.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/HomeFXMLController.java</file>
             <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Utils/DataSource.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/UserAffichController.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Entities/Cours.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/GestionCoursFXMLController.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Services/EService.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Services/CService.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/GUI/mainGui.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Services/ArenaService.java</file>
-            <file>file:/C:/Users/Ousse/Desktop/integration/PidevDesktop/src/Services/UserService.java</file>
         </group>
     </open-files>
 </project-private>

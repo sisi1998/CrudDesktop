@@ -5,6 +5,7 @@
 package GUI;
 
 import Entities.Equipe;
+import Entities.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -13,6 +14,9 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import Services.EquipeService;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -33,6 +37,13 @@ private Equipe eq;
     private Label id;
     @FXML
     private Label origin;
+    private User userc;
+    @FXML
+    private Button compC;
+    @FXML
+    private Button perfC1;
+    @FXML
+    private Text sess;
    
 
     /**
@@ -54,7 +65,20 @@ private Equipe eq;
         if(imagee!=null){
         image.setImage(imagee);}
         }
+     public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
     
+        
+        }
+
+    @FXML
+    private void espaceCompetition(ActionEvent event) {
+    }
+
+    @FXML
+    private void espacePerformance(ActionEvent event) {
+    }
     
     
 }

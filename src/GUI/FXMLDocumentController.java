@@ -7,6 +7,7 @@ package GUI;
 
 import Entities.Arena;
 import Entities.Cours;
+import Entities.User;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -41,6 +42,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -60,8 +62,6 @@ public class FXMLDocumentController implements Initializable {
      private Button AddImage;
     @FXML
     private TextField URLImage;
-      @FXML
-    private Button btn;
     @FXML
     private TableView<Arena> ArenaTable;
     @FXML
@@ -72,14 +72,8 @@ public class FXMLDocumentController implements Initializable {
     private TableColumn<Arena, String> adressCol;
      @FXML
     private TableColumn<Arena, String> imgCol;
-      @FXML
-    private TextField Nom;
     @FXML
     private TextField Recherchew;
-    @FXML
-    private TextField Surface;
-    @FXML
-    private TextField Adresse;
        @FXML
     private Button btnArena;
  @FXML
@@ -93,6 +87,9 @@ public class FXMLDocumentController implements Initializable {
        @FXML
     private Button btnf;
     ArenaService s=new ArenaService();
+    @FXML
+    private Text sess;
+    private User userc;
     
     @FXML
     private void AddImage(ActionEvent event) throws FileNotFoundException, IOException {
@@ -159,7 +156,6 @@ public class FXMLDocumentController implements Initializable {
         ArenaTable.setItems(branlist2);
 
     }
-       @FXML
     private void Supprimerx() throws SQLException{
         
         //Arena a2 = ArenaTable.getSelectionModel().getSelectedItem().getId();
@@ -272,5 +268,11 @@ public class FXMLDocumentController implements Initializable {
            
         
     }    
+    public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+
+}
     
 }

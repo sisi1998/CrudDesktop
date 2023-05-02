@@ -26,6 +26,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import Services.UserService;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -49,6 +50,13 @@ public class UserIndexController implements Initializable {
     private Button rfch;
     @FXML
     private TextField search;
+    @FXML
+    private Text sess;
+    private User userc;
+      public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+}
     
     @Override
    public void initialize(URL url, ResourceBundle rb) {

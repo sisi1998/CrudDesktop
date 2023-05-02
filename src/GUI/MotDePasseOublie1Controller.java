@@ -26,6 +26,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.paint.Color;
 import Services.MailService;
 import Services.PasswordCrypt;
+import javafx.scene.text.Text;
 //mailer end
 
 
@@ -54,6 +55,14 @@ public class MotDePasseOublie1Controller implements Initializable {
     private PasswordField password;
     
     private String resetToken;
+    @FXML
+    private Text sess;
+    private User userc;
+    
+    public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+}
 
     /**
      * Initializes the controller class.

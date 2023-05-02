@@ -12,8 +12,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" onDragDetected="#sendMails" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #001F3D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminListCompetitionController">
+<AnchorPane id="AnchorPane" onDragDetected="#sendMails" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #001F3D;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminListCompetitionController">
     <stylesheets>
         <URL value="@adminaddcompetition.css" />
     </stylesheets>
@@ -34,6 +35,11 @@
                         <Image url="@IMG/coach.png" />
                      </image>
                   </ImageView>
+                  <Text fx:id="sess" fill="#83d483" layoutX="20.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="val_">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
             <TableView fx:id="tableview" layoutX="217.0" layoutY="133.0" prefHeight="364.0" prefWidth="552.0" stylesheets="@fullpackstyling.css">

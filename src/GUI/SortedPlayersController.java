@@ -32,6 +32,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -53,6 +54,13 @@ public class SortedPlayersController implements Initializable {
     private Button Goback;
     @FXML
     private Button compB;
+    @FXML
+    private Text sess;
+    private User userc;
+      public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+}
 
     /**
      * Initializes the controller class.

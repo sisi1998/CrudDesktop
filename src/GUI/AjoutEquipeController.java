@@ -5,6 +5,7 @@
 package GUI;
 
 import Entities.Equipe;
+import Entities.User;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -24,6 +25,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import Services.EquipeService;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -48,6 +50,9 @@ public class AjoutEquipeController implements Initializable {
     private Label l3;
     
     File selectedFile;
+    @FXML
+    private Text sess;
+    private User userc;
 
     /**
      * Initializes the controller class.
@@ -117,6 +122,10 @@ public class AjoutEquipeController implements Initializable {
             stage.close();
         
     }
-    }
+     public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+    }}
     
 

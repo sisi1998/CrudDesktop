@@ -8,6 +8,7 @@ package GUI;
 import Entities.Arena;
 import Entities.Competition;
 import Entities.Equipe;
+import Entities.User;
 import Services.CompetitionService;
 import java.io.IOException;
 import java.net.URL;
@@ -42,6 +43,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.util.Callback;
 
 /**
@@ -88,6 +90,9 @@ private HashMap<Integer, ImageView> imageViewMap = new HashMap<>();
     private Button send;
     @FXML
     private TextField recherche;
+    @FXML
+    private Text sess;
+    private User userc;
 
 /**
  * Initializes the controller class.
@@ -353,5 +358,11 @@ public void initialize(URL url, ResourceBundle rb) {
     private void sendMails(MouseEvent event) {
     }
 
+     public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+        
+        }
    
 }

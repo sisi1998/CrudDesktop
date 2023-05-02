@@ -10,8 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UpdatePerformanceController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UpdatePerformanceController">
  <stylesheets>
         <URL value="@adminaddcompetition.css" />
       <URL value="@fullpackstyling.css" />
@@ -33,6 +34,11 @@
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font></Button>
+                  <Text fx:id="sess" fill="#83d483" layoutX="7.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="val_">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
             <Pane layoutX="523.0" prefHeight="112.0" prefWidth="223.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@fullpackstyling.css">

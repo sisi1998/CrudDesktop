@@ -5,12 +5,14 @@
 package GUI;
 
 import Entities.PerformanceEquipe;
+import Entities.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -32,6 +34,9 @@ private PerformanceEquipe pee ;
     private Label id_but_marque;
     @FXML
     private Label id_but_encaisses;
+    @FXML
+    private Text sess;
+    private User userc;
 
     /**
      * Initializes the controller class.
@@ -57,5 +62,10 @@ private PerformanceEquipe pee ;
             stage.close();
     }
     
+                  public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
     
-}
+        
+    
+                  }}

@@ -2,6 +2,7 @@ package GUI;
 
 import Entities.Competition;
 import Entities.Equipe;
+import Entities.User;
 import Services.CompetitionService;
 import java.io.IOException;
 import java.net.URL;
@@ -24,6 +25,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class FavoriteCompetitionController implements Initializable {
@@ -47,6 +49,9 @@ public class FavoriteCompetitionController implements Initializable {
     private Button compB;
     @FXML
     private Button Goback;
+    @FXML
+    private Text sess;
+    private User userc;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -134,4 +139,11 @@ public class FavoriteCompetitionController implements Initializable {
                             stage.setScene(new Scene(root));
                             stage.show();
     }
+    
+    public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+
+}
 }

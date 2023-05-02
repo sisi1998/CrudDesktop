@@ -26,6 +26,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -73,8 +74,16 @@ public class PerformanceFrontController implements Initializable {
     private Button pdf;
     @FXML
     private Button perfButton1;
+    @FXML
+    private Text sess;
+    private User userc;
    
-   
+   public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+
+}
   
     /**
      * Initializes the controller class.

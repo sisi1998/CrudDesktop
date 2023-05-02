@@ -30,6 +30,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -76,6 +77,10 @@ public class AddPerformanceController implements Initializable {
     private Button compC;
     @FXML
     private Button perfC1;
+    private User userc;
+    @FXML
+    private Text sess;
+   
   
     /**
      * Initializes the controller class.
@@ -264,4 +269,10 @@ System.out.println(per);
                             stage.setScene(new Scene(root));
                             stage.show();
     }
+    public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+    
+        
+        }
 }

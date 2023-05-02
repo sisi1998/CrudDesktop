@@ -9,8 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AffichEquipeController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AffichEquipeController">
     <children>
       <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-radius: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import java.lang.String?&gt;&lt;?import java.net.URL?&gt;&lt;?import javafx.scene.control.Button?&gt;&lt;?import javafx.scene.layout.AnchorPane?&gt;&lt;?import javafx.scene.text.Font?&gt;&lt;AnchorPane prefHeight=&quot;600.0&quot; prefWidth=&quot;201.0&quot; styleClass=&quot;right-bar&quot; stylesheets=&quot;@adminaddcompetition.css&quot; xmlns=&quot;http://javafx.com/javafx/8.0.171&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;children&gt;      &lt;Button fx:id=&quot;compC&quot; layoutY=&quot;80.0&quot; mnemonicParsing=&quot;false&quot; onAction=&quot;#espaceCompetition&quot; prefHeight=&quot;75.0&quot; prefWidth=&quot;200.0&quot; styleClass=&quot;button2&quot; text=&quot;Espace Competition&quot; textFill=&quot;WHITE&quot;&gt;         &lt;stylesheets&gt;            &lt;URL value=&quot;@adminaddcompetition.css&quot; /&gt;            &lt;URL value=&quot;@fullpackstyling.css&quot; /&gt;         &lt;/stylesheets&gt;         &lt;font&gt;            &lt;Font name=&quot;System Bold&quot; size=&quot;18.0&quot; /&gt;         &lt;/font&gt;      &lt;/Button&gt;      &lt;Button fx:id=&quot;perfC1&quot; layoutY=&quot;166.0&quot; mnemonicParsing=&quot;false&quot; onAction=&quot;#espacePerformance&quot; prefHeight=&quot;75.0&quot; prefWidth=&quot;200.0&quot; text=&quot;Espace Performance&quot; textFill=&quot;WHITE&quot;&gt;         &lt;stylesheets&gt;            &lt;URL value=&quot;@adminaddcompetition.css&quot; /&gt;            &lt;URL value=&quot;@fullpackstyling.css&quot; /&gt;         &lt;/stylesheets&gt;         &lt;font&gt;            &lt;Font name=&quot;System Bold&quot; size=&quot;18.0&quot; /&gt;         &lt;/font&gt;         &lt;styleClass&gt;            &lt;String fx:value=&quot;linear-grad&quot; /&gt;            &lt;String fx:value=&quot;button2&quot; /&gt;         &lt;/styleClass&gt;      &lt;/Button&gt;   &lt;/children&gt;&lt;/AnchorPane&gt;;" styleClass="linear-grad">
          <children>
@@ -79,6 +80,11 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
+                  <Text fx:id="sess" fill="#83d483" layoutX="207.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="val_">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
          </children>

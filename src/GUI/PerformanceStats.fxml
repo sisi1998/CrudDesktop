@@ -15,8 +15,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PerformanceStatsController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PerformanceStatsController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-radius: 70;" styleClass="linear-grad">
          <children>
@@ -124,6 +125,11 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
+            <Text fx:id="sess" fill="#83d483" layoutX="2.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="val_">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </children>

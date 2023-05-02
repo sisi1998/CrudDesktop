@@ -10,8 +10,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PerformanceFrontController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PerformanceFrontController">
    <children>
       <AnchorPane layoutX="-6.0" prefHeight="133.0" prefWidth="807.0" styleClass="button3" stylesheets="@fullpackstyling.css">
          <children>
@@ -45,6 +46,11 @@
                </styleClass>
             </Button>
             <Button fx:id="pdf" layoutX="496.0" layoutY="54.0" mnemonicParsing="false" onAction="#PDFGen" styleClass="button4" text="Exporter en PDF" textFill="WHITE" />
+            <Text fx:id="sess" fill="#83d483" layoutX="10.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="val_">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <TableView fx:id="tableview" layoutY="133.0" prefHeight="365.0" prefWidth="801.0" stylesheets="@fullpackstyling.css">

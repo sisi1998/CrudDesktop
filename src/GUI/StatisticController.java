@@ -6,6 +6,7 @@ package GUI;
 
 import Entities.Equipe;
 import Entities.PerformanceEquipe;
+import Entities.User;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -31,6 +32,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import java.sql.Connection;
 import Utils.DataSource;
+import javafx.scene.text.Text;
+
+
 
 
 
@@ -40,6 +44,14 @@ import Utils.DataSource;
  * @author Admin
  */
 public class StatisticController implements Initializable {
+    
+    @FXML
+    private Text sess;
+    private User userc;
+      public void getSession(User userc){
+         this.userc=userc;
+    this.sess.setText(userc.getEmail());
+}
 
    PreparedStatement st = null;
     ResultSet rs = null;

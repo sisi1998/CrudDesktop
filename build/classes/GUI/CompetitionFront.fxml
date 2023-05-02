@@ -13,8 +13,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CompetitionFrontController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CompetitionFrontController">
     
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="222.0" styleClass="right-bar" stylesheets="@adminaddcompetition.css">
@@ -62,6 +63,11 @@
             <Label layoutX="20.0" layoutY="208.0" text="Nom" textFill="WHITE" />
             <Label layoutX="21.0" layoutY="240.0" text="Date" textFill="WHITE" />
             <Label layoutX="17.0" layoutY="270.0" text="Arene" textFill="WHITE" />
+            <Text fx:id="sess" fill="#83d483" layoutX="6.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="val_">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <HBox layoutX="233.0" layoutY="207.0" prefHeight="379.0" prefWidth="564.0" styleClass="linear-grad">

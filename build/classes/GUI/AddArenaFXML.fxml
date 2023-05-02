@@ -1,61 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="670.0" style="-fx-background-color: #1d3557;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AddArenaFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="right-bar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AddArenaFXMLController">
    <children>
-      <Pane layoutX="290.0" layoutY="101.0" prefHeight="264.0" prefWidth="290.0" style="-fx-background-color: #1d3257;">
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-radius: 70;" styleClass="linear-grad">
+         <stylesheets>
+            <URL value="@fullpackstyling.css" />
+            <URL value="@adminaddcompetition.css" />
+         </stylesheets>
          <children>
-             
-
-             
-            <Label alignment="CENTER" layoutX="34.0" layoutY="78.0" text="Nom : " textFill="#e88904">
-               <font>
-                  <Font name="System Italic" size="18.0" />
-               </font>
-               <effect>
-                  <Bloom />
-               </effect>
-            </Label>
-            <Label alignment="CENTER" layoutX="30.0" layoutY="124.0" text="Surface :" textFill="#e88904">
-               <font>
-                  <Font name="System Italic" size="18.0" />
-               </font>
-               <effect>
-                  <Bloom />
-               </effect>
-            </Label>
-            <Label alignment="CENTER" layoutX="30.0" layoutY="164.0" text="Adresse : " textFill="#e88904">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <Bloom />
-               </effect>
-            </Label>
-            <Label alignment="CENTER" layoutX="36.0" layoutY="210.0" text="Image : " textFill="#e88904">
-               <font>
-                  <Font name="System Italic" size="18.0" />
-               </font>
-               <effect>
-                  <Bloom />
-               </effect>
-            </Label>
-            <TextField fx:id="txtn" alignment="CENTER" layoutX="123.0" layoutY="71.0" />
-            <TextField fx:id="txtp" alignment="CENTER" layoutX="123.0" layoutY="120.0" />
-            <TextField fx:id="txta" alignment="CENTER" layoutX="123.0" layoutY="165.0" />
-            <TextField fx:id="URLImage" alignment="CENTER" layoutX="123.0" layoutY="211.0" />
+            <Pane layoutX="306.0" layoutY="131.0" prefHeight="374.0" prefWidth="452.0" style="-fx-background-radius: 20;" styleClass="right-bar">
+               <children>
+                   
+      
+                   
+                  <Label alignment="CENTER" layoutX="34.0" layoutY="78.0" text="Nom : " textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="30.0" layoutY="124.0" text="Surface :" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="30.0" layoutY="164.0" text="Adresse : " textFill="#fcfcfc">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="36.0" layoutY="210.0" text="Image : " textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <TextField fx:id="txtn" alignment="CENTER" layoutX="123.0" layoutY="71.0" />
+                  <TextField fx:id="txtp" alignment="CENTER" layoutX="123.0" layoutY="120.0" />
+                  <TextField fx:id="txta" alignment="CENTER" layoutX="123.0" layoutY="165.0" />
+                  <TextField fx:id="URLImage" alignment="CENTER" layoutX="123.0" layoutY="211.0" />
+                  
+                  <Button layoutX="328.0" layoutY="313.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="34.0" prefWidth="86.0" styleClass="add-btn" text="Ajouter" />
+                  <ImageView fx:id="Imagex" fitHeight="112.0" fitWidth="138.0" layoutX="182.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button layoutX="15.0" layoutY="294.0" mnemonicParsing="false" onAction="#AddImage" prefHeight="32.0" prefWidth="94.0" styleClass="add-btn" text="addimage" />
+               </children>
+               <stylesheets>
+                  <URL value="@adminaddcompetition.css" />
+                  <URL value="@fullpackstyling.css" />
+               </stylesheets>
+            </Pane>
+            <Button layoutX="235.0" layoutY="561.0" mnemonicParsing="false" styleClass="add-btn" text="Retour" />
          </children>
-      </Pane>
-      <VBox layoutX="-2.0" prefHeight="542.0" prefWidth="206.0" style="-fx-background-color: #27436B;">
+      </AnchorPane>
+      <VBox layoutX="-2.0" prefHeight="600.0" prefWidth="206.0" styleClass="right-bar">
          <children>
                     <Button fx:id="btnf" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="30.0" prefWidth="205.0" text="Ajouter Arene" />
                   <Button fx:id="btnArena" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="29.0" prefWidth="205.0" text="Gestion Arena" />
@@ -63,18 +83,42 @@
                           <Button fx:id="btnCours" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="29.0" prefWidth="206.0" text="Gestion Cours" />
                   <Button fx:id="btnl" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="31.0" prefWidth="206.0" text="Lister Cours" />
                   <Button fx:id="btnx" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="34.0" prefWidth="206.0" text="Accueil" />
-         </children></VBox>
-      <Button layoutX="258.0" layoutY="397.0" mnemonicParsing="false" onAction="#AddImage" prefHeight="32.0" prefWidth="94.0" text="addimage" />
-      
-      <Button layoutX="255.0" layoutY="444.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="42.0" prefWidth="101.0" text="Ajouter" />
-      <ImageView fx:id="Imagex" fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="229.0" layoutY="57.0" prefHeight="54.0" prefWidth="270.0" text="Ajouter Arene" textFill="#e88904">
-         <font>
-            <Font size="24.0" />
-         </font>
-         <effect>
-            <Bloom />
-         </effect>
-      </Label>
+         </children>
+         <stylesheets>
+            <URL value="@fullpackstyling.css" />
+            <URL value="@adminaddcompetition.css" />
+         </stylesheets></VBox>
+      <Pane layoutX="475.0" layoutY="55.0" prefHeight="76.0" prefWidth="277.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@fullpackstyling.css">
+         <children>
+            <Label layoutX="21.0" layoutY="14.0" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="76.0" fitWidth="59.0" layoutX="217.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@IMG/coach.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="sess" fill="#83d483" layoutX="9.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="val_">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="253.0" layoutY="100.0" prefHeight="31.0" prefWidth="228.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@fullpackstyling.css">
+         <children>
+            <Label layoutX="22.0" layoutY="4.0" prefHeight="27.0" prefWidth="200.0" text="Ajouter arene" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
+   <stylesheets>
+      <URL value="@fullpackstyling.css" />
+      <URL value="@adminaddcompetition.css" />
+   </stylesheets>
 </AnchorPane>
